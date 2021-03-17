@@ -1,0 +1,15 @@
+#app {
+  text-align: center;
+}
+
+.ring_wrapper {
+  background-color: #ddd;
+  width: 150px;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.father, .child, button {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="style.css">
+
+<div id="app">
+  <div class="ring_wrapper">
+    <p>父親ブロックあり</p>
+    <div class="father" @click="fatherClick">
+      <button class="child" @click="childClick">
+        呼び鈴
+      </button>
+    </div>
+  </div>
+  <div class="fatherBlock ring_wrapper">
+    <p>父親ブロックなし</p>
+    <div class="father" @click="fatherClick">
+      <button class="child" @click.stop="childClick">
+        呼び鈴
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="app.js" ></script>
