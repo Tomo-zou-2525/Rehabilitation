@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rehabilitation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
+  <body>
+    <div id="app" class="container">
+      <h1>
+        <button v-on:click="vOnClick">
+          全件消しちゃうぞ♡
+        </button>
+        My Todos
+      </h1>
+      <ul>
+        <input type="checkbox" />
+        <li>task1</li>
+        <span>[うんこ]</span>
+
+        <li v-show="!todos.length">タスクがございませんぬ</li>
+      </ul>
+      <!-- formにはv-on:submit.prevent
+      .stopはイベントの動きを止める
+      .preventは画面遷移を止める -->
+      <form>
+        <!-- v-modelをつけることでデータバインディングを行う
+        リアクティブシステムを使いタイのならばv-bindからv-on -->
+        <input type="text" />
+        <!-- inputにvalue属性をつけると初期値が設定できる -->
+        <input type="button" value="押してみ？" />
+      </form>
+    </div>
+  </body>
+</html>
