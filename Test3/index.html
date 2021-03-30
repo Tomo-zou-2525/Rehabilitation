@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fortitude</title>
+    <title>Rehabilitation</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
-      <the-header tinko="anko"></the-header>
+      <p>
+        {{ counter }}
+      </p>
+      <button v-on:click="counter += 1">+1</button>
+      {{ counter > 3 ? "Up" : "Down"}}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>

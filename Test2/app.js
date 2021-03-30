@@ -1,5 +1,6 @@
 Vue.component("the-header", {
-  template: "<p>Test</p>"
+  template: "<p></p>",
+  props: ["unko"]
 });
 
 new Vue({
