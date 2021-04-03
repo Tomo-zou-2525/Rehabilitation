@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rehabilitation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- 基本のデータバインディング -->
+      <p v-cloak>
+        {{ message }}
+      </p>
+      <!-- v-forで配列を表示 -->
+      <ul>
+        <li v-for="list in lists">
+          {{ list }}
+        </li>
+      </ul>
+      <!-- v-onでクリックイベントを実装 -->
+      <button @click="handleClick">
+        クリックしてみ
+      </button>
+      <!-- v-modelでinputタグの中身を同期させる -->
+      <input v-model="bindMessage" />
+      <p>
+        {{ bindMessage }}
+      </p>
+      <!-- v-ifで条件分岐させる -->
+      <p v-if="seenIf">
+        お、、おらのことがみえるのかい、、？！
+      </p>
+      <!-- v-showで条件分岐 -->
+      <p v-show="seenShow">
+        あ、、あんたもみえるっていうのかい、、？？！！
+      </p>
+      <!-- チェックボックスで、true(チェックがつけば)表示 -->
+      <input type="checkbox" @click="clickBox" />
+      <p v-show="seenHide">
+        おらのことがみつけられるかな？
+      </p>
+      <button @click="show=!show">
+        クリックで表示が切り替わるよ
+      </button>
+      <p v-show="show">
+        ひょっこりはん
+      </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
