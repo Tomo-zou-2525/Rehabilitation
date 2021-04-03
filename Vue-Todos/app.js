@@ -24,20 +24,21 @@ let app = new Vue({
       /* そのitemを引数に、todosに.pushメソッドで追加する
       この時のtodosもthisで持っててくる */
       this.todos.push(item);
+    },
+    deleteTodo: function(index) {
+      //なんかtodo.deleteとか、デリートメソッド使うのでしょう
+      //→インデックス番号を用いて、.spliceで削除を行う
+      //ついでに、削除実行前にif(confirm)で注意を促す様に
+      if (confirm("タスクを消しますか？")) {
+        this.todos.splice(index, 1);
+      }
+    },
+    addItem: function() {
+      //inputのテキストに入力された値を保存する
+      // 毎回描画されたら面倒やから、これ算出プロパティじゃない？
+    },
+    allDelete: function() {
+      //なんかtodos.deleteとかつかうのかな？
     }
-  },
-  newTodo: function() {
-    // v-modelでinputの入力値をVueインスタンスに同期させる
-    // これメソッドじゃなくない？
-  },
-  addItem: function() {
-    //inputのテキストに入力された値を保存する
-    // 毎回描画されたら面倒やから、これ算出プロパティじゃない？
-  },
-  deleteTodo: function() {
-    //なんかtodo.deleteとか、デリートメソッド使うのでしょう
-  },
-  allDelete: function() {
-    //なんかtodos.deleteとかつかうのかな？
   }
 });

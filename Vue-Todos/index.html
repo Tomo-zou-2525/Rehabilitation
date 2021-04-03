@@ -6,20 +6,29 @@
     <title>Vue-Todo</title>
   </head>
   <body>
+    <!-- app.jsの範囲のブロックを生成 -->
     <div id="app">
       <h1>
         俺のTodo
       </h1>
       <ul>
+        <!-- v-forで配列を表示 -->
         <li v-for="todo in todos">
-          <p>{{ todo.title }}</p>
+          <input type="checkbox" />
+          <span :class="{done: todo.isDone}">
+            {{ todo.title }}
+          </span>
+          <span @click="deleteTodo(index)">[×]</span>
         </li>
+        <!-- 投稿内容が無い場合は専用の文を表示させる -->
         <li v-show="!todos.length">
           タスクがありません
         </li>
       </ul>
       <!-- 投稿フォーム saveTodoで、変数itemに「newItem」の入力された文字列と
       isDoneのfalseを代入し、this.todos.pushメソッドに引数を（item）でプロパティに追加 -->
+      <!-- なお、その際にv-onにかかるsubmit処理に、修飾子.preventをつけることで
+      デフォルトの動作を消す  -->
       <form @submit.prevent="saveTodo">
         <input type="text" v-model="newItem" />
         <input type="submit" value="保存" />
