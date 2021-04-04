@@ -33,12 +33,15 @@ let app = new Vue({
         this.todos.splice(index, 1);
       }
     },
-    addItem: function() {
-      //inputのテキストに入力された値を保存する
-      // 毎回描画されたら面倒やから、これ算出プロパティじゃない？
-    },
+    // addItem: function() {
+    //   inputのテキストに入力された値を保存する
+    //   毎回描画されたら面倒やから、これ算出プロパティじゃない？
+    //   saveTodoがこれでしたーitem変数に入力値とfalseを渡し、pushメソッドで代入
+    // },
     allDelete: function() {
       //なんかtodos.deleteとかつかうのかな？
+      //計算とかいらんから、から文字をかえしたろうと思いましたまる
+      return null;
     }
   }
 });

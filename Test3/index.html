@@ -11,8 +11,14 @@
       <p>
         {{ counter }}
       </p>
+      <p>
+        {{ otherNumber}}
+      </p>
       <button v-on:click="counter += 1">+1</button>
-      {{ counter > 3 ? "Up" : "Down"}}
+      <button v-on:click="otherNumber += 1">other +1</button>
+      <!-- {{ counter > 3 ? "Up" : "Down"}} -->
+      <p>{{ judgeThreeCountMethod() }}</p>
+      <p>{{ judgeThreeCountComputed }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>

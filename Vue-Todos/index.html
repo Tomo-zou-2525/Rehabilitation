@@ -9,10 +9,14 @@
     <!-- app.jsの範囲のブロックを生成 -->
     <div id="app">
       <h1>
+        <button @click="allDelete">
+          全件削除
+        </button>
         俺のTodo
       </h1>
       <ul>
         <!-- v-forで配列を表示 -->
+
         <li v-for="todo in todos">
           <input type="checkbox" />
           <span :class="{done: todo.isDone}">
