@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <input type="text" v-model="newTask" />
+      <button @click="addTask">追加</button>
+      <ul>
+        <!-- <li v-for="todo in todos"></li> -->
+        <li v-for="(todo, index) in todos"></li>
+      </ul>
+      <pre>
+        {{ todos }}
+      </pre>
+      <pre>
+        {{ newTask }}
+      </pre>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="main.js"></script>
+</html>
