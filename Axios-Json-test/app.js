@@ -1,9 +1,15 @@
 let app = new Vue({
   el: "#app",
   data: {
-    members: [
-      { name: "ともや", age: 30, mail: "unko@buriburi.com" },
-      { name: "ともみ", age: 57, mail: "unko@bitibiti.com" },
-    ],
+    members: []
   },
+  created: {
+
+    axios.get("http://localhost:3000/members")
+      .then(res => {
+
+        console.log(JSON.stringify(res));
+        this.members = res.data
+      })
+    }
 });
