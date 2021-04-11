@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div v-bind:style="styles">
+        <p>スタイル</p>
+      </div>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          styles: {
+            backgroundColor: "green",
+            fontSize: "30px",
+            color: "red",
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
