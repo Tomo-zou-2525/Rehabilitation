@@ -3,22 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
-    <style>
-      .sample-class1 {
-        background: red;
-        color: yellow;
-      }
-    </style>
   </head>
+
   <body>
     <div id="app">
-      <div :class="unko">background</div>
+      <div v-bind:style="[styles1,styles2]">
+        <p>スタイル</p>
+      </div>
     </div>
+
     <script>
       new Vue({
         el: "#app",
         data: {
-          unko: "sample-class1",
+          styles1: {
+            backgroundColor: "green",
+            fontSize: "30px",
+            color: "red",
+          },
+          styles2: {
+            width: "200px",
+            height: "200px",
+          },
         },
       });
     </script>

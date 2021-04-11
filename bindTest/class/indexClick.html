@@ -3,29 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>classMultiple</title>
+    <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
     <style>
-      .sample-class1 {
+      .sample-active {
         background: red;
         color: yellow;
-      }
-
-      .sample-class2 {
-        font-size: 30px;
       }
     </style>
   </head>
   <body>
     <div id="app">
-      <div v-bind:class="[sample1,sample2]">背景</div>
+      <div v-bind:class="{ 'sample-active' : isActive }">背景</div>
+      <button v-on:click="changeColor">切り替え</button>
     </div>
     <script>
       new Vue({
         el: "#app",
         data: {
-          sample1: "sample-class1",
-          sample2: "sample-class2",
+          isActive: false,
+        },
+        methods: {
+          changeColor: function () {
+            this.isActive = !this.isActive;
+          },
         },
       });
     </script>
