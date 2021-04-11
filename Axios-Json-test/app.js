@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 let app = new Vue({
   el: "#app",
   data: {
@@ -6,10 +8,10 @@ let app = new Vue({
   created: {
 
     axios.get("http://localhost:3000/members")
-      .then(res => {
+      .then(response => {
 
-        console.log(JSON.stringify(res));
-        this.members = res.data
+        console.log(JSON.stringify(response));
+        this.members = response.data
       })
     }
 });

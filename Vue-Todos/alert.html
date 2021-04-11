@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlertDemo</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <div id="alert">
+      <h1>data</h1>
+      <!-- clickした時にtestMethodが発火するようにしよう -->
+      <button @click="testMethod">method button</button>
+      <button @click="alertDemo">alertDemo</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="alert.js"></script>
+  </body>
+</html>
