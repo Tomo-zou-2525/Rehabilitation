@@ -47,9 +47,6 @@
 </template>
 
 <script>
-import "../style/bulma/css/bulma.css";
-import "../style/bulma-extensions/dist/css/bulma-extensions.min.css";
-
 export default {
   name: "HslColorMixer",
   data() {
@@ -166,14 +163,4 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-frame {
-  margin: 10px;
-  margin-top: 20px;
-}
-.field {
-  margin-bottom: 10px;
-  :last-child {
-    margin-bottom: 0;
-  }
-}
 </style>
