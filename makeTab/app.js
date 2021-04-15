@@ -22,6 +22,15 @@
     // console.log($this);
     console.log(targetVal);
 
+    //対象外のコンテンツを無効化する
+    let index = 0
+    while (index < $tabData.length) {
+      //ボタンにhandleClick関数をくっつける
+      $tabContent[index].style.display = "none"
+      $tabData[index].classList.remove("is-active")
+      index++
+    }
+
     // 対象のコンテンツをアクティブ化
     $tabItem.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = "block"
     $tabData[targetVal].classList.add("is-active")
