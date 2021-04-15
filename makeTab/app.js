@@ -21,6 +21,12 @@
     const targetVal = $this.dataset.nav
     // console.log($this);
     console.log(targetVal);
+
+    // 対象のコンテンツをアクティブ化
+    $tabItem.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = "block"
+    $tabData[targetVal].classList.add("is-active")
+    console.log($tabData);
+
   }
 
   //全部のタブにイベントつける
