@@ -15,8 +15,12 @@
   const handleClick = (e) => {
     e.preventDefault()
     //(e) 確認
-    console.log(e);
-    console.log("Unko!!")
+    // console.log(e);
+    const $this = e.target
+    //datasetはDOM要素を取ってくる .navはdata-nav
+    const targetVal = $this.dataset.nav
+    // console.log($this);
+    console.log(targetVal);
   }
 
   //全部のタブにイベントつける
