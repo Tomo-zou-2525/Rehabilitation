@@ -20,8 +20,12 @@
   }
 
   //全部のタブにイベントつける
+  let index = 0
+  while (index < $tabData.length) {
+    //ボタンにhandleClick関数をくっつける
+    $tabData[index].addEventListener("click", (e) => handleClick(e))
+    index++
+  }
 
-  //ボタンにhandleClick関数をくっつける
-  $tabData[0].addEventListener("click", (e) => handleClick(e))
 
 })()
