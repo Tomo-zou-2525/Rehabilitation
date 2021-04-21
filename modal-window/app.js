@@ -1,6 +1,14 @@
 const vm = new Vue({
   el: "#app",
   data: {
-    message: "",
+    isDone: false,
+  },
+  methods: {
+    openModal: function () {
+      this.isDone = true;
+    },
+    closeModal: function () {
+      this.isDone = false;
+    },
   },
 });

@@ -1,6 +1,6 @@
 #overlay {
   /* 要素を重ねた時の順番 */
-  z-index: -1;
+  z-index: 1;
 
   /* 画面全体の設定 */
   position: fixed;
@@ -14,4 +14,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#content {
+  z-index: 2;
+  width: 50%;
+  padding: 1rem;
+  background: #fff;
 }

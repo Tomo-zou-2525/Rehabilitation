@@ -8,12 +8,17 @@
   </head>
   <body>
     <div id="app">
-      <button>Click</button>
+      <!-- v-onでisFalseを有効か -->
+      <button v-on:click="openModal">Click</button>
       <span>クリックボタンを表示</span>
-      <div id="overlay">{{message}}</div>
-      <div>
-        <input v-model="message" />
-        {{ message }}
+      <!-- v-showで表示させるif分岐 -->
+      <div v-show="isDone" id="overlay">
+        <div id="content">
+          <p>これがモーダルウィンドウです</p>
+          <p>
+            <button @click="closeModal">Close</button>
+          </p>
+        </div>
       </div>
     </div>
   </body>
